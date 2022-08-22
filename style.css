@@ -1,8 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: 'Space Grotesk', sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  background: none;
+  appearance:none;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside > img {
+  position: absolute;
+  width: 100vw;
+  height: 240px;
+}
+
+.card {
+  height: 157px;
+  width: 287px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-size: contain;
+  position: absolute;
+  color: white;
+  letter-spacing: 0.1rem;
+}
+
+h2 {
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+#card-front {
+  background-image: url("./images/bg-card-front.png");
+  margin: 130px 40px 0 0;
+  z-index: 1;
+}
+
+#card-front > h1 {
+  margin-top: 20px;
+}
+
+#card-front > div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#card-rear {
+  background-image: url("./images/bg-card-back.png");
+  margin: 40px 0px 0px 80px;
+}
+
+#card-rear > h2 {
+  margin: 52px 0 0 210px;
+}
+
+#form-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 375px;
+  width: 375px;
+  padding: 25px;
+}
+
+input {
+  border: solid 1px hsl(270, 3%, 87%);
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  -moz-appearance: textfield;
+}
+
+input:placeholder-shown {
+  color: hsl(279, 6%, 55%);
+}
+
+.label-input {
+  font-size: 12px;
+  color: hsl(278, 68%, 11%);
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+#label-input-cvc {
+  margin-left: 25px;
+}
+
+.warning-invalid {
+  color: hsl(0, 100%, 66%);
+  font-size: 12px;
+  height: 1rem;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#details > * {
+  display: flex;
+}
+
+#input-month, #input-year {
+  margin-right: 8px;
+}
+
+#input-cvc {
+  width: 200%;
+}
+
+#warning-input-month, #warning-input-year {
+  margin-right: 16px;
+}
+
+#warning-input-cvc {
+  width: 200%;
+}
+
+#submit {
+  color: white;
+  background-color: hsl(278, 68%, 11%);
+  padding: 15px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 
 .attribution a {
+  font-size: 11px;
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 100px) {
+  .card img {
+    height: 30px;
+  }
 }
