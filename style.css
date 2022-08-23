@@ -9,6 +9,7 @@
   font-weight: 500;
   background: none;
   appearance:none;
+  /* border: dashed grey 1px; */
 }
 
 main {
@@ -22,18 +23,22 @@ aside {
   height: 300px;
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   align-items: center;
 }
 
-aside > img {
-  position: absolute;
+#bg-mobile {
   width: 100vw;
   height: 240px;
 }
 
+#bg-desktop {
+  display: none;
+}
+
 .card {
-  height: 157px;
-  width: 287px;
+  min-height: 157px;
+  min-width: 287px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -43,6 +48,7 @@ aside > img {
   position: absolute;
   color: white;
   letter-spacing: 0.1rem;
+  z-index: 1;
 }
 
 h2 {
@@ -52,8 +58,8 @@ h2 {
 
 #card-front {
   background-image: url("./images/bg-card-front.png");
-  margin: 130px 40px 0 0;
-  z-index: 1;
+  top: 130px;
+  margin-right: 40px;
 }
 
 #card-front > h1 {
@@ -151,8 +157,58 @@ input:placeholder-shown {
   color: hsl(228, 45%, 44%);
 }
 
-@media screen and (min-width: 100px) {
-  .card img {
-    height: 30px;
+@media screen and (min-width: 1100px) {
+  main {
+    flex-direction: row;
+    min-height: 100vh;
+  }
+
+  aside {
+    height: 100vh;
+    width: 30%;
+  }
+  
+  #bg-mobile {
+    display: none;
+  }
+  
+  #bg-desktop {
+    display: unset;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    min-height: calc(400px * 157/287);
+    min-width: 400px;
+    padding: 20px;
+  }
+
+  #card-front {
+    margin: unset;
+    top: 20%;
+    left: 10%;
+  }
+  
+  #card-rear {
+    margin: unset;
+    top: 45%;
+    left: 15%;
+  }
+
+  #card-rear h2 {
+    margin: 79px 0 0 300px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 13px;
+  }
+
+  #form-main {
+    margin-left: 20%;
   }
 }
