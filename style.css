@@ -141,10 +141,35 @@ input:placeholder-shown {
   width: 200%;
 }
 
-#submit {
+#submit, #continue {
   color: white;
   background-color: hsl(278, 68%, 11%);
   padding: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+#thank-you {
+  min-height: 100vh;
+  width: 375px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#thank-you > h1 {
+  text-transform: uppercase;
+  color: hsl(278, 68%, 11%);
+  font-size: 28px;
+  letter-spacing: 0.15rem;
+}
+
+#thank-you > p {
+  color: hsl(279, 6%, 55%);
+  margin-bottom: 30px;
 }
 
 .attribution {
