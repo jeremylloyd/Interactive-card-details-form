@@ -35,4 +35,16 @@ Users should be able to:
 
 ### What I learned
 
-Nothing yet
+- The `id` HTML attribute makes it super easy to select the element in JS
+- The `.validity` attribute is super useful for form input validation:
+  - `element.validity.valueMissing` tells you if an input is blank
+  - `element.validity.badInput` tells you if the user input matches the input `type` you specified in your HTML
+  - `element.validity.rangeOverflow` and `element.validity.rangeUnderflow` tells you if the user input is outside the range specified by `min` and `max` in your HTML
+- Adding/removing classes is a simple way to make complex appearance changes in JS
+  - I used the `.selected` class to only validate form inputs after the user has clicked them
+  - Keeping class names relatively short is the way to go. `warning-invalid` felt long when combined with other class names in the HTML
+- Installing the prettier linter in VScode helps teach me (a beginner) best JS practices as I go
+  - 2 space indents
+  - for/if blocks shouldn't go on a single line, even if they're short
+- There's no simple way to do a gradient border/outline in CSS
+- HTML's default validation won't get you far if you want to control exactly how the user interacts with your website - adding a JavaScript function to validate whenever the user submits a form or deselects an input lets you do a whole lot more like adjusting other elements of the webpage, adjusting error messages depending on what the user did wrong, etc.
