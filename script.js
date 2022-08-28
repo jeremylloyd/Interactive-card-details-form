@@ -152,7 +152,7 @@ function validateYear() {
     yearInput.validity.rangeOverflow ||
     yearInput.validity.rangeUnderflow
   ) {
-    label.innerHTML = "Choose 1-12";
+    label.innerHTML = "Choose 0-99";
   } else {
     label.innerHTML = "";
     return true;
