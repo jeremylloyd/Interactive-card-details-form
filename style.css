@@ -98,9 +98,20 @@ input {
   -moz-appearance: textfield;
 }
 
-input:placeholder-shown {
-  color: hsl(279, 6%, 55%);
+input:focus {
+  border: solid 1px hsl(278, 94%, 30%);
+  outline: none;
 }
+
+.selected:invalid {
+  border: solid 1px hsl(0, 100%, 66%);
+}
+
+
+
+
+
+
 
 .label-input {
   font-size: 12px;
@@ -115,7 +126,7 @@ input:placeholder-shown {
 
 .warning-invalid {
   color: hsl(0, 100%, 66%);
-  font-size: 12px;
+  font-size: 11px;
   height: 1rem;
   margin-bottom: 10px;
   width: 100%;
@@ -133,12 +144,8 @@ input:placeholder-shown {
   width: 200%;
 }
 
-#warning-input-month, #warning-input-year {
-  margin-right: 16px;
-}
-
 #warning-input-cvc {
-  width: 200%;
+  width: 170%;
 }
 
 #submit, #continue {
