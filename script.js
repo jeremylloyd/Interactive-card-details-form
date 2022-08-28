@@ -14,6 +14,16 @@ cvcInput.addEventListener("blur", checkCvc)
 submitButton.addEventListener("click", submit)
 continueButton.addEventListener("click", reset)
 
+function submit() {
+    document.getElementById("form-main").style.display = "none"
+    document.getElementById("thank-you").style.display = null
+}
+
+function reset() {
+    document.getElementById("thank-you").style.display = "none"
+    document.getElementById("form-main").style.display = null
+}
+
 function checkNumber() {
     numberInput.classList.add("selected")
     isValid = validateNumber()
@@ -156,14 +166,4 @@ function validateCvc() {
         return true
     }
     return false
-}
-
-function submit() {
-    document.getElementById("form-main").style.display = "none"
-    document.getElementById("thank-you").style.display = null
-}
-
-function reset() {
-    document.getElementById("thank-you").style.display = "none"
-    document.getElementById("form-main").style.display = null
 }
